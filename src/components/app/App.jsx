@@ -23,7 +23,7 @@ class App extends Component {
   };
 
   countPositiveFeedbackPercentage = good => {
-    return ((good / this.countTotalFeedback()) * 100).toFixed(0);
+    return Number(((good / this.countTotalFeedback()) * 100).toFixed(0));
   };
 
   render() {

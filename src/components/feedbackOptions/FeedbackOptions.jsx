@@ -1,15 +1,16 @@
 import PropTypes from 'prop-types';
+import { OptionBtn } from './FeedbackOptions.styled';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) =>
   options.map(option => {
     return (
-      <button
+      <OptionBtn
         type="button"
         key={option}
         onClick={() => onLeaveFeedback(option)}
       >
         {option[0].toUpperCase() + option.substring(1)}
-      </button>
+      </OptionBtn>
     );
   });
 
